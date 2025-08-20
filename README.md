@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Cosma Beauty
 
-## Getting Started
+A **modern beauty treatment booking platform** built with **Next.js, MongoDB, and Tailwind CSS**.  
+Users can search for skin/hair concerns, discover treatments, view clinic packages, and submit enquiries.  
+Admins can manage enquiries from a dedicated dashboard.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** Next.js (Pages Router), React, Tailwind CSS  
+- **Backend:** Next.js API Routes  
+- **Database:** MongoDB with Mongoose  
+- **Validation:** Zod  
+- **UI/UX:** React Hot Toast, Responsive Design  
+
+---
+
+## 📖 Features
+
+- 🔍 Search treatments by skin/hair concern  
+- 📦 View clinic packages  
+- 📝 Submit customer enquiries  
+- 🛠 Admin dashboard to manage enquiries  
+
+---
+
+## 📂 Pages
+
+- `/` → Homepage with search functionality  
+- `/admin/enquiries` → Admin dashboard for managing enquiries  
+
+---
+
+## 📡 API Documentation
+
+| Method   | Endpoint         | Description                    | Parameters                |
+|----------|-----------------|--------------------------------|---------------------------|
+| GET      | `/api/search`   | Search treatments by concern   | `?concern=<text>`         |
+| POST     | `/api/enquiries`| Submit customer enquiry        | JSON body                 |
+| GET      | `/api/enquiries`| List all enquiries (admin)     | None                      |
+| GET/POST | `/api/seed`     | Seed database with sample data | None                      |
+
+---
+
+## ⚙️ Setup & Run
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/rudra-140207/CosmaBeauty.git
+cd CosmaBeauty
+
+# 2. Install dependencies
+npm install
+
+# 3. Create .env.local file in the root directory
+# (paste the following inside .env.local)
+MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/cosma_beauty?retryWrites=true&w=majority"
+
+# 4. Seed the database with sample data
+# (open in browser OR use curl)
+# Browser: http://localhost:3000/api/seed
+# Curl: curl -X POST http://localhost:3000/api/seed
+
+# 5. Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
