@@ -66,7 +66,7 @@ export default function PackageCard({ pkg }) {
         <h3 className="text-lg font-semibold text-green-800 mb-2">Enquiry Submitted!</h3>
         <p className="text-green-700 text-sm">
           Thank you for your interest in <strong>{pkg.package_name}</strong>. 
-          We'll get back to you soon!
+          We will get back to you soon!
         </p>
       </div>
     );

@@ -111,7 +111,7 @@ export default function Home() {
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                   <div className="w-6 h-6 bg-blue-500 rounded mr-3"></div>
-                  Available Treatments for "{result.concern.name}"
+                  Available Treatments for {result.concern.name}
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {result.treatments.map(treatment => (
@@ -140,7 +140,7 @@ export default function Home() {
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No Results Found</h3>
               <p className="text-gray-600">
-                We couldn't find any treatments for "{concern}". 
+                We could not find any treatments for {concern}. 
                 Try one of our suggested concerns or contact us for personalized recommendations.
               </p>
             </div>
